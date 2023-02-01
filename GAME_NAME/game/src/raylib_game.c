@@ -23,13 +23,18 @@
 //----------------------------------------------------------------------------------
 // Local Variables Definition (local to this module)
 //----------------------------------------------------------------------------------
-static const int screenWidth = 800;
-static const int screenHeight = 450;
+static const int screenWidth{ 800 };
+static const int screenHeight{ 450 };
+static const float windowName{ "raylib basic game template"}
 
 //----------------------------------------------------------------------------------
 // Local Functions Declaration
 //----------------------------------------------------------------------------------
 
+static void UpdateDrawFrame(void);          // Update and draw one frame
+static void Update(void);
+static void DrawUI(void);
+static void Draw(void);
 
 //----------------------------------------------------------------------------------
 // Main entry point
@@ -38,7 +43,7 @@ int main(void)
 {
     // Initialization
     //---------------------------------------------------------
-    InitWindow(screenWidth, screenHeight, "raylib game template");
+    InitWindow(screenWidth, screenHeight, windowName);
 
     InitAudioDevice();      // Initialize audio device
 
@@ -68,17 +73,32 @@ int main(void)
 // Module specific Functions Definition
 //----------------------------------------------------------------------------------
 
+// Update and draw game frame
+static void UpdateDrawFrame(void)
+{
+    Update();
 
-
-//----------------------------------------------------------------------------------
-// Draw
-//----------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------
+    // Draw
+    //----------------------------------------------------------------------------------
     BeginDrawing();
+    ClearBackground(RAYWHITE);
+    //DrawFPS(10, 10);
 
-        ClearBackground(RAYWHITE);
-
-        //DrawFPS(10, 10);
+    Draw();
 
     EndDrawing();
     //----------------------------------------------------------------------------------
+}
+
+static void Update(void) {
+
+}
+
+static void Draw(void) {
+
+}
+
+static void DrawUI(void) {
+    DrawText("Hello Raylib", 200,200,20,WHITE);
 }
