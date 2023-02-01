@@ -86,6 +86,7 @@ static void UpdateDrawFrame(void)
     //DrawFPS(10, 10);
 
     Draw();
+    DrawUI();
 
     EndDrawing();
     //----------------------------------------------------------------------------------
@@ -100,5 +101,5 @@ static void Draw(void) {
 }
 
 static void DrawUI(void) {
-    DrawText("Hello Raylib", 200,200,20,WHITE);
+    DrawText("Hello Raylib", 200, 200, 20, BLUE);
 }
