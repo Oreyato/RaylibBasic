@@ -23,9 +23,9 @@
 //----------------------------------------------------------------------------------
 // Local Variables Definition (local to this module)
 //----------------------------------------------------------------------------------
-static const int screenWidth{ 800 };
-static const int screenHeight{ 450 };
-static const float windowName{ "raylib basic game template"}
+static const int screenWidth = 800;
+static const int screenHeight = 450;
+static const char* windowName = "raylib basic game template";
 
 //----------------------------------------------------------------------------------
 // Local Functions Declaration
