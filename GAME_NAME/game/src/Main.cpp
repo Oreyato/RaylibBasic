@@ -74,7 +74,7 @@ int main(void)
 //----------------------------------------------------------------------------------
 
 // Update and draw game frame
-static void UpdateDrawFrame(void)
+void UpdateDrawFrame(void)
 {
     Update();
 
@@ -92,14 +92,14 @@ static void UpdateDrawFrame(void)
     //----------------------------------------------------------------------------------
 }
 
-static void Update(void) {
+void Update(void) {
 
 }
 
-static void Draw(void) {
+void Draw(void) {
 
 }
 
-static void DrawUI(void) {
+void DrawUI(void) {
     DrawText("Hello Raylib", 200, 200, 20, BLUE);
 }
